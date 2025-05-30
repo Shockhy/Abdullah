@@ -1,0 +1,517 @@
+<!DOCTYPE html><html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> AGBOOLA</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+      background: linear-gradient(to right, rgba(24, 7, 92, 0.6), rgba(34, 12, 67, 0.4))
+    }
+    header {
+      background: #333;
+      color: #fff;
+      padding: 1rem 0;
+      background: linear-gradient(to right, rgba(199, 88, 19, 0.6), rgba(165, 163, 168, 0.4))
+    
+    }
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 1100px;
+      margin: auto;
+      padding: 0 1rem;
+    }
+    nav h1 {
+      font-size: 1.5rem;
+    
+     
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 1rem;
+    }
+    nav ul li a {
+      color: #fff;
+      text-decoration: none;
+    }
+    .hero {
+  background-image: url('Picture2.jpeg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh; /* Full screen height */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white; /* Adjust depending on the image */
+  position: relative;
+}
+
+.hero::after {
+  content: '';
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background-color: rgba(0, 0, 0, 0.4); /* optional overlay */
+  z-index: 1;
+}
+
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+    .hero .overlay{
+        background-color: rgba(0,0,0,0.5);
+        padding: 3rem;
+        border-radius: 10px;
+    }
+    .cta-button {
+      display: inline-block;
+      background: #fff;
+      color: #143de4;
+      padding: 0.75rem 1.5rem;
+      border-radius: 5px;
+      text-decoration: none;
+      margin-top: 1rem;
+    }
+    section {
+      padding: 2rem 1rem;
+      max-width: 1000px;
+      margin: auto;
+    }
+   
+    .projects-section {
+  text-align: center;
+  padding: 50px 20px;
+  background: linear-gradient(to right, rgba(236, 18, 7, 0.6), rgba(179, 175, 182, 0.4)), url("./background1.jpg");
+}
+
+.projects-section h2 {
+  font-size: 2em;
+  margin-bottom: 30px;
+}
+
+.projects-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  
+}
+
+.project-card {
+  border-radius: 10px;
+  width: 300px;
+  padding: 20px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+.project-card h3 {
+  margin-bottom: 10px;
+  font-size: 1.3em;
+}
+
+.project-links {
+  margin-top: 15px;
+}
+
+.project-links a {
+  color: #5a3abf;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.project-links a:hover {
+  text-decoration: underline;
+}
+   
+    .skills-section {
+  text-align: center;
+  padding: 40px;
+}
+
+.skills-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+  margin-top: 30px;
+}
+
+.skill {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.3s ease;
+}
+
+.skill i {
+  font-size: 70px;
+}
+
+.skill:hover {
+  transform: scale(1.1);
+}
+
+.skill span {
+  margin-top: 10px;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.experience-section{
+  background: linear-gradient(to right, rgba(245, 32, 8, 0.6), rgba(197, 191, 200, 0.4)), url("./background1.jpg");
+}
+.experience-entry {
+  background-color: #5959ad;
+  border-left: 5px solid #e9200a;
+  margin: 20px auto;
+  padding: 20px;
+  max-width: 700px;
+  text-align: left;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(11, 9, 9, 0.87);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+  
+}
+.experience-section h2{
+  text-align: center;
+  width: 100%;
+  font-size: 2rem;
+  margin-bottom: 30px;
+}
+
+.experience-entry:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.15);
+  border-left-color: #00b894; /* a nice green shade */
+}
+
+.responsibilities {
+  list-style: none;
+  padding-left: 0;
+}
+
+.responsibilities li::before {
+  content: "✓";
+  color: #5a3abf;
+  font-weight: bold;
+  display: inline-block;
+  width: 1.2em;
+  margin-left: -1.2em;
+}
+.contact-section {
+  padding: 60px 20px;
+  text-align: center;
+  
+ 
+}
+
+.contact-section h2 {
+  font-size: 2em;
+  margin-bottom: 20px;
+}
+
+.toggle-btn {
+  background: linear-gradient(to right, rgba(230, 5, 5, 0.6), rgba(166, 161, 169, 0.4)), url("./background1.jpg");
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  margin-bottom: 15px;
+  transition: background-color 0.3s;
+}
+
+.toggle-btn:hover {
+  background-color: #37353e;
+}
+
+.contact-box {
+  display: none;
+  background: linear-gradient(to right, rgba(229, 51, 7, 0.6), rgba(169, 165, 172, 0.4)), url("./background1.jpg");
+  border: 2px solid #090808;
+  border-radius: 10px;
+  padding: 20px;
+  max-width: 500px;
+  margin: 0 auto 30px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.contact-box p {
+  margin: 10px 0;
+  font-size: 1.1em;
+}
+
+.contact-box i {
+  margin-right: 10px;
+  color: #0e0d0d;
+}
+
+.contact-box a {
+  text-decoration: none;
+  color: #333;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.input-group {
+  position: relative;
+}
+
+.input-group i {
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #888;
+  transition: color 0.3s;
+}
+
+.input-group input,
+.input-group textarea {
+  width: 100%;
+  padding: 10px 10px 10px 40px;
+  font-size: 1em;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+.input-group textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+.input-group input:focus + i,
+.input-group textarea:focus + i {
+  color: #5a3abf;
+}
+
+.contact-form button {
+  background-color: #e9290b;
+  color: white;
+  padding: 12px;
+  font-size: 1em;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.contact-form button:hover {
+  background-color: #fffbfa;
+}
+
+.feedback-msg {
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+.error-text {
+  color: rgb(14, 11, 11);
+  font-size: 0.9em;
+  text-align: left;
+  margin-top: -10px;
+  margin-bottom: 5px;
+}
+    footer {
+      background: #333;
+      color: #fff;
+      text-align: center;
+      padding: 1rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav>
+      <h1>AGBOOLA</h1>
+      <ul>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#Experience">Experience</a></li>
+        <li><a href="#PROJECT">Projects</a></li>
+      </ul>
+    </nav>
+  </header>  <section class="hero">
+    <div class="hero-content">
+    <h2>GREETINGS I'M AGBOOLA✨</h2>
+  </div>
+  </section>
+  <section class="about" id="about">
+    <div class="container">
+      <h2>About Me</h2>
+      <p>
+       <h5> I'm AGBOOLA, I'm an enthusiastic and skilled web developer, I specilize in designing responsive and user-friendly interface using HTML,CSS, and Javascript. My expertise extend to the front-end framework like React and Angular, as well as back-end technologies like Ruby on Rails. I'm passoinate about staying up-to-date with the latest trends and best oractices in web development.
+      </p>
+    </div>
+  </section>
+  <section id="projects" class="projects-section">
+    <h2>Projects</h2>
+  
+    <div class="projects-container">
+      <div class="project-card">
+        <h3>Portfolio Website</h3>
+        <p><strong>Tech used:</strong> HTML, CSS, JavaScript</p>
+      </div>
+  
+      </div>
+      <!-- Add more cards as needed -->
+    </div>
+  </section> 
+  <section id="skills" class="skills-section">
+    <h2>My Skills</h2>
+    <div class="skills-container">
+      <div class="skill">
+        <i class="devicon-html5-plain colored"></i>
+        <span>HTML</span>
+      </div>
+      <div class="skill">
+        <i class="devicon-css3-plain colored"></i>
+        <span>CSS</span>
+      </div>
+      <div class="skill">
+        <i class="devicon-javascript-plain colored"></i>
+        <span>JavaScript</span>
+      </div>
+      <div class="skill">
+        <i class="devicon-react-original colored"></i>
+        <span>React</span>
+      </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="experience" class="experience-section">
+    <h2>Experience</h2>
+  
+    <div class="experience-entry">
+      <h3>Frontend Intern</h3>
+      <p class="org">New Horizons ICT Resource Center</p>
+      <ul class="responsibilities">
+        <li>Learned UI/UX principles, Git version control, and real-world deployment.</li>
+      </ul>
+    </div>
+  
+    <div class="experience-entry">
+      <h3>Web Developer Volunteer</h3>
+      <p class="org">Campus Dev Club</p>
+      <ul class="responsibilities">
+        <li>Contributed to the club’s website revamp using Flexbox and Grid layout.</li>
+      </ul>
+    </div>
+  </section>
+  <section id="contact" class="contact-section">
+    <h2>Contact Me</h2>
+
+  
+    <form class="contact-form" onsubmit="return validateForm()">
+      <div class="input-group">
+        <i class="fas fa-user"></i>
+        <input type="text" id="name" placeholder="Your Name">
+      </div>
+      <span id="nameError" class="error-text"></span>
+  
+      <div class="input-group">
+        <i class="fas fa-envelope"></i>
+        <input type="email" id="email" placeholder="Your Email">
+      </div>
+      <span id="emailError" class="error-text"></span>
+  
+      <div class="input-group">
+        <i class="fas fa-comment"></i>
+        <textarea id="message" placeholder="Your Message"></textarea>
+      </div>
+      <span id="messageError" class="error-text"></span>
+  
+      <button type="submit">Send Message</button>
+      <p id="feedback" class="feedback-msg"></p>
+      <script>
+        function toggleContactInfo() {
+          const box = document.getElementById("contactBox");
+          const button = document.querySelector(".toggle-btn");
+      
+          if (box.style.display === "none" || box.style.display === "") {
+            box.style.display = "block";
+            button.textContent = "Hide Contact Info";
+          } else {
+            box.style.display = "none";
+            button.textContent = "Show Contact Info";
+          }
+        }
+      
+        function validateForm() {
+          const name = document.getElementById("name").value.trim();
+          const email = document.getElementById("email").value.trim();
+          const message = document.getElementById("message").value.trim();
+      
+          const nameError = document.getElementById("nameError");
+          const emailError = document.getElementById("emailError");
+          const messageError = document.getElementById("messageError");
+          const feedback = document.getElementById("feedback");
+      
+          nameError.textContent = "";
+          emailError.textContent = "";
+          messageError.textContent = "";
+          feedback.textContent = "";
+      
+          let hasError = false;
+      
+          if (!name) {
+            nameError.textContent = "Please enter your name.";
+            hasError = true;
+          }
+      
+          if (!email) {
+            emailError.textContent = "Please enter your email.";
+            hasError = true;
+          }
+      
+          if (!message) {
+            messageError.textContent = "Please enter a message.";
+            hasError = true;
+          }
+      
+          if (hasError) {
+            return false;
+          }
+      
+          feedback.style.color = "green";
+          feedback.textContent = "Message sent successfully!";
+          return false; // Prevent real submission
+        }
+      </script>
+    </form>
+  </section>
+ 
+ 
+      <footer>
+    <p>&copy; <span id="year"></span> AGBOOLA</p>
+    <script>
+      document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+  </footer>
+</body>
+</html>
